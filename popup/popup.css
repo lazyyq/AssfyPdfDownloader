@@ -1,0 +1,28 @@
+body {
+  width: 200px;
+  height: 200px;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.github-link {
+  display: block;
+  transition: transform 0.2s;
+}
+
+.github-link:hover {
+  transform: scale(1.1);
+}
+
+.github-logo {
+  width: 64px;
+  height: 64px;
+}
