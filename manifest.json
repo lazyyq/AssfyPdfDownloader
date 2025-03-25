@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "ASSFY PDF Downloader",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Download lecture slides as PDF",
   "action": {
     "default_popup": "popup/popup.html",
