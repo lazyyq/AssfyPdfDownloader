@@ -103,6 +103,17 @@ observer.observe(document.body, {
 async function handleDownload() {
   const loader = showLoader("Preparing to capture slides...");
   try {
+    // Remember current page mode
+    const doublePageToggle = document.querySelector(
+      "div.btn-toolbar > div.btn-group.pull-right > button[command=toggleDoublePage]"
+    );
+    const isDoublePage = doublePageToggle.classList.contains("active");
+
+    // Switch to single page mode
+    if (isDoublePage) {
+      doublePageToggle.click();
+    }
+
     // Remember current page number
     const currentPageLabel = document.querySelector("span.label-page");
     const originalPage = currentPageLabel
@@ -167,6 +178,11 @@ async function handleDownload() {
             keyCode: 13,
           })
         );
+      }
+
+      // Return to original page mode
+      if (isDoublePage) {
+        doublePageToggle.click();
       }
 
       removeLoader(loader);
