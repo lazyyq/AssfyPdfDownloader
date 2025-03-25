@@ -3,10 +3,6 @@
   "name": "ASSFY PDF Downloader",
   "version": "0.0.1",
   "description": "Download lecture slides as PDF",
-  "permissions": [
-    "downloads",
-    "activeTab"
-  ],
   "action": {
     "default_popup": "popup/popup.html",
     "default_icon": {
@@ -23,13 +19,8 @@
       "matches": [
         "https://edu.ssafy.com/data/upload_files/crossUpload/openLrn/ebook/unzip/*/index.html"
       ],
-      "js": [
-        "lib/pdfkit.standalone.js",
-        "content/content.js"
-      ],
-      "css": [
-        "content/content.css"
-      ]
+      "js": ["lib/pdfkit.standalone.js", "content/content.js"],
+      "css": ["content/content.css"]
     }
   ],
   "icons": {
